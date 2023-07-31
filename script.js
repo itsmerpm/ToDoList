@@ -3,59 +3,36 @@ document.querySelector(".btn").onclick=function(){
         alert("Enter a Task")
     }
     else{
-      document.querySelector("#tasks").innerHTML+=`
-            <div class="task">
-                <span id="taskname">
-                    ${document.querySelector('.textbox').value}
-                </span>
-                <button class="delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-        `;
+     const inputbox =  document.querySelector(".textbox")
+      const ul = document.querySelector("#tasks ul");
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      li.innerText= inputbox.value;
+      ul.appendChild(li);
+      span.innerText="Delete"
+      li.appendChild(span)
+    }
+    const close = document.querySelectorAll("span");
+    for(let i=0; i<close.length; i++){
+        close[i].addEventListener('click',()=>{
 
-        // var current_task = document.querySelector(".delete");
-        // for(var i=0; i<current_task.length; i++)
-        // {
-        //     current_task[i].onclick= function()
-        //     {
-        //         this.parentNode.remove();
-        //         console.log(this.parentElement.remove());
-        //     }
-        // }
-    
-   
-    // const del= document.querySelector(".delete");
-    // const taskname = document.querySelector("#taskname");
-    // del.onclick= function(){
-    //     taskname.remove()
-    //     del.remove()
+            console.log(close[0].parentElement);
+            close[i].parentElement.style.opacity=0;
+            setTimeout(() => {
+                close[i].parentElement.remove();  
+            }, 500);
 
-    // }
-
-    
+           
+        })
+    }
        
     }
 
-    const del= document.querySelectorAll(".delete");
-    
-    
 
-    for(i=0;i<del.length;i++){
-
-        del[i].addEventListener('click',()=>{
-            alert("hello")
-            console.log(del.parentElement);
-
-            del[i].parentElement.style.display="none"
-
-
-
-        })
-
-    }
 
     
-    }
 
     // ref https://www.youtube.com/watch?v=7Yigdj6lEXk
+
+
+    

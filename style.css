@@ -47,3 +47,32 @@ header h1{
     align-items: center;
     justify-content: space-between;
 }
+ul{
+    width: 500px;
+   
+
+}
+ul li{
+    width: 100%;
+    list-style: none;
+    background-color: white;
+    color: rgb(61, 61, 190);
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+    transition: 0.7s ease-in-out;
+}
+ul li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    text-align: center;
+    background-color: rgb(227, 56, 56);
+    color: white;
+    
+}
