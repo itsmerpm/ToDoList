@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body{
+    min-height: 100vh;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 16%, rgba(0,212,255,1) 100%);
+    
 }
 header{
     margin-top: 80px;
@@ -18,22 +20,41 @@ header h1{
     padding: 20px;
     padding-left: 0px;
 }
-.btn{
-    margin: 10px;
-    
-    
-}
+
 .main-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .textbox{
     outline: none;
+    height: 30px;
+ 
     border-radius: 2px;
     border: 0px;
     padding-left: 10px;
-  
+    margin-left: 24px
+
+}
+.btn{
+    margin: 5px;
+    padding: 8px;
+    background-color: rgb(21, 117, 32);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor:pointer;    
+    transition: 0.4s ease-out;
+}
+.textbox::placeholder{
+    color: rgb(7, 5, 47);
+    padding: 2px;
+    opacity: 0.5;
+}
+.btn:hover{
+    opacity: 0.8;
 }
 #tasks{
     color: white;
@@ -41,30 +62,29 @@ header h1{
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
 }
-.task, .delete{
-    display:flex ;
-    align-items: center;
-    justify-content: space-between;
-}
+
 ul{
     width: 500px;
-   
-
 }
 ul li{
     width: 100%;
     list-style: none;
     background-color: white;
-    color: rgb(61, 61, 190);
+    color: rgb(49, 49, 202);
+    font-weight:bold;
     height: 40px;
     line-height: 40px;
-    padding: 0 5px;
+    padding: 0 11px;
     position: relative;
     cursor: pointer;
     display: block;
-    margin: 5px 0;
+    margin: 7px 0;
     transition: 0.7s ease-in-out;
+    border-radius: 2px;
+    user-select: none;
 }
 ul li span{
     position: absolute;
@@ -72,7 +92,12 @@ ul li span{
     right: 0;
     width: 50px;
     text-align: center;
-    background-color: rgb(227, 56, 56);
+    background-color: rgb(229, 41, 41);
     color: white;
-    
+    border-radius: 2px;
+    opacity: 0.8;
+    transition: 0.9s ease-out;
+}
+ul li span:hover{
+    opacity: 1;
 }
