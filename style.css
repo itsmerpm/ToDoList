@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 16%, rgba(0,212,255,1) 100%);
+}
+header{
+    margin-top: 80px;
+    color: white;
+}
+
+header h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 0px;
+}
+.btn{
+    margin: 10px;
+    
+    
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textbox{
+    outline: none;
+    border-radius: 2px;
+    border: 0px;
+    padding-left: 10px;
+  
+}
+#tasks{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.task, .delete{
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+}
