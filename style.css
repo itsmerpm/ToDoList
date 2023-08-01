@@ -107,7 +107,7 @@ ul li span:hover {
         flex: 50%;
     }
 } */
-@media (max-width:700px){
+@media (max-width:800px){
  ul li{
   align-items: center;
   margin-left: auto;
