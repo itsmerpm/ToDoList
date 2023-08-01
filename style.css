@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  min-height: 100vh;
+ 
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -101,4 +101,18 @@ ul li span {
 }
 ul li span:hover {
   opacity: 1;
+}
+/* @media (max-width:767px){
+    .container{
+        flex: 50%;
+    }
+} */
+@media (max-width:700px){
+ ul li{
+  align-items: center;
+  margin-left: auto;
+  width: 80%;
+  margin-right: auto;
+  
+  }
 }
