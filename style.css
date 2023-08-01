@@ -1,122 +1,114 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
- 
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 16%,
-    rgba(0, 212, 255, 1) 100%
-  );
+    background: linear-gradient(90deg, rgba(12, 8, 78, 1) 0%, rgba(9, 9, 121, 1) 38%, rgba(0, 212, 255, 1) 100%);
+    font-family: "Nunito", sans-serif;
 }
 header {
-  margin-top: 80px;
-  color: white;
+    margin-top: 80px;
+    color: white;
 }
 
 header h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  padding-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 0px;
+    letter-spacing: 2px;
 }
 
 .main-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .textbox {
-  outline: none;
-  height: 30px;
-  border-radius: 2px;
-  border: 0px;
-  padding-left: 10px;
-  margin-left: 24px;
+    outline: none;
+    height: 30px;
+    border-radius: 2px;
+    border: 0px;
+    padding-left: 10px;
+    margin-left: 24px;
 }
 .btn {
-  margin: 5px;
-  padding: 8px;
-  background-color: rgb(21, 117, 32);
-  color: white;
-  outline: none;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.4s ease-out;
+    margin: 5px;
+    padding: 8px;
+    background-color: rgb(21, 117, 32);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.4s ease-out;
 }
 .textbox::placeholder {
-  color: rgb(7, 5, 47);
-  padding: 2px;
-  opacity: 0.5;
+    color: rgb(7, 5, 47);
+    padding: 2px;
+    opacity: 0.5;
 }
 .btn:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 #tasks {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: 10px;
-  padding-left: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 ul {
-  width: 500px;
+    width: 500px;
 }
 ul li {
-  width: 100%;
-  list-style: none;
-  background-color: white;
-  color: rgb(49, 49, 202);
-  font-weight: bold;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 11px;
-  position: relative;
-  cursor: pointer;
-  display: block;
-  margin: 7px 0;
-  transition: 0.7s ease-in-out;
-  border-radius: 2px;
-  user-select: none;
+    width: 100%;
+    list-style: none;
+    background-color: white;
+    color: rgb(49, 49, 187);
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 11px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 7px 0;
+    transition: 0.7s ease-in-out;
+    border-radius: 2px;
+    user-select: none;
 }
 ul li span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  text-align: center;
-  background-color: rgb(229, 41, 41);
-  color: white;
-  border-radius: 2px;
-  opacity: 0.8;
-  transition: 0.9s ease-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    text-align: center;
+    background-color: rgb(229, 41, 41);
+    color: white;
+    border-radius: 2px;
+    opacity: 0.8;
+    transition: 0.9s ease-out;
 }
 ul li span:hover {
-  opacity: 1;
+    opacity: 1;
 }
-/* @media (max-width:767px){
-    .container{
-        flex: 50%;
+
+@media screen and (max-width: 800px) {
+    ul li {
+        align-items: center;
+        margin-left: auto;
+        width: 80%;
+        margin-right: auto;
     }
-} */
-@media screen and (max-width:800px){
- ul li{
-  align-items: center;
-  margin-left: auto;
-  width: 80%;
-  margin-right: auto;
-  }
-  ul li span{
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    ul li span {
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
