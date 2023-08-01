@@ -107,12 +107,13 @@ ul li span:hover {
         flex: 50%;
     }
 } */
-@media (max-width:800px){
+@media screen and (max-width:800px){
  ul li{
   align-items: center;
   margin-left: auto;
   width: 80%;
   margin-right: auto;
-    background-color: yellow;
+  background-color: yellow;
   }
 }
+@media
