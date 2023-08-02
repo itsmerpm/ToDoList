@@ -11,11 +11,10 @@ document.querySelector(".btn").onclick = function () {
         span.innerHTML = '<i class="fa-solid fa-trash"></i>';
         li.appendChild(span);
     }
-
+    
     const close = document.querySelectorAll("span");
     for (let i = 0; i < close.length; i++) {
         close[i].addEventListener("click", () => {
-            console.log(close[0].parentElement);
             close[i].parentElement.style.opacity = 0;
             setTimeout(() => {
                 close[i].parentElement.remove();
@@ -23,5 +22,26 @@ document.querySelector(".btn").onclick = function () {
         });
     }
 
+  
+
+    const clearallbtn = document.querySelector("#clearallbtn");
+    for (let i = 0; i < close.length; i++) {
+        clearallbtn.addEventListener("click", () => {
+            close[i].parentElement.style.opacity = 0;
+            setTimeout(() => {
+                close[i].parentElement.remove();
+                clearallbtn.style.display = "none"
+            }, 500);
+            
+        });
+        
+    }
+    if(close){
+        clearallbtn.style.display = "block";
+    }
+    
+   
+
     document.querySelector(".textbox").value = "";
 };
+
