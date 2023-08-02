@@ -82,6 +82,8 @@ ul li {
     transition: 0.7s ease-in-out;
     border-radius: 2px;
     user-select: none;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 ul li span {
     position: absolute;
@@ -110,5 +112,6 @@ ul li span:hover {
         align-items: center;
         margin-left: auto;
         margin-right: auto;
+        opacity: 1;
     }
 }
