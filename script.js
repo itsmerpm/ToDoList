@@ -8,7 +8,7 @@ input.addEventListener("keyup",(e)=>{
     }
 
 })
-//main code
+//main code -- Adding Tasks
 document.querySelector(".btn").onclick = function () {
     if (document.querySelector(".textbox").value.length == 0) {
         alert("Enter a Task");
@@ -17,12 +17,29 @@ document.querySelector(".btn").onclick = function () {
         const ul = document.querySelector("#tasks ul");
         const li = document.createElement("li");
         const span = document.createElement("span");
+        const editBtn = document.createElement("button");
+        editBtn.classList.add("sp1");
+        editBtn.innerHTML = '<i class="fa-solid fa-edit"></i>'
         li.innerText = inputbox.value;
         ul.appendChild(li);
         span.innerHTML = '<i class="fa-solid fa-check"></i>';
         li.appendChild(span);
+        li.appendChild(editBtn);
     }
-
+    // edit btn
+    const deletebtn = document.querySelectorAll(".sp1")
+    let li = document.querySelector("li")
+    for (let i = 0; i < deletebtn.length; i++){
+        deletebtn[i].addEventListener("click",()=>{
+            document.querySelector(".textbox").value = deletebtn[i].parentNode.innerText;
+            document.querySelector(".textbox").focus();
+            deletebtn[i].parentElement.style.opacity = 0;
+            setTimeout(() => {
+                deletebtn[i].parentElement.remove();
+            }, 200);
+            
+        })
+    }
     // Tick button
     const close = document.querySelectorAll("span");
     for (let i = 0; i < close.length; i++) {
@@ -41,8 +58,8 @@ document.querySelector(".btn").onclick = function () {
         clearallbtn.addEventListener("click", () => {
             close[i].parentElement.style.opacity = 0;
             setTimeout(() => {
-                close[i].parentElement.remove();
                 clearallbtn.style.display = "none"
+                close[i].parentElement.remove();
             }, 500);
             
         });
@@ -53,7 +70,11 @@ document.querySelector(".btn").onclick = function () {
         clearallbtn.style.display = "block";
     }
     
+
+
+
    //empty input box after enter
     document.querySelector(".textbox").value = "";
 };
+
 
