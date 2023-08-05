@@ -133,6 +133,9 @@ ul li span:hover {
     border: none;
     outline: 0;
 }
+.sp1:hover{
+    opacity: 1;
+}
 @media screen and (max-width: 800px) {
     ul li {
         align-items: center;
@@ -141,6 +144,7 @@ ul li span:hover {
         margin-right: auto;
     }
     ul li span {
+        width: 14%;
         align-items: center;
         margin-left: auto;
         margin-right: auto;
@@ -153,9 +157,8 @@ ul li span:hover {
         opacity: 1;
     }
     .sp1{
-        align-items: center;
-        margin-left: 259px;
-        margin-right: auto;
+        margin-right: 4%;
+        width: 16%;
         opacity: 1;
     }
 }
