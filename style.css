@@ -46,6 +46,9 @@ header h1 {
     transition: 0.4s ease-out;
     opacity: 0.8;
 }
+.btn:hover {
+    opacity: 1;
+}
 #clearallbtn{
     margin: 5px;
     padding: 8px;
@@ -67,9 +70,7 @@ header h1 {
     padding: 2px;
     opacity: 0.5;
 }
-.btn:hover {
-    opacity: 1;
-}
+
 #tasks {
     color: white;
     display: flex;

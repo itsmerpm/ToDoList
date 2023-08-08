@@ -1,19 +1,18 @@
 //Enter button to submit
-const input = document.querySelector(".textbox");
+const inputbox = document.querySelector(".textbox");
 const pressbtn = document.querySelector(".btn");
 
-input.addEventListener("keyup", (e) => {
+inputbox.addEventListener("keyup", (e) => {
     e.preventDefault();
     if (e.keyCode === 13) {
         pressbtn.click();
     }
 });
 //main code -- Adding Tasks
-document.querySelector(".btn").onclick = function () {
-    if (document.querySelector(".textbox").value.length == 0) {
+pressbtn.onclick = function () {
+    if (inputbox.value.trim().length == 0) {
         alert("Enter a Task");
     } else {
-        const inputbox = document.querySelector(".textbox");
         const ul = document.querySelector("#tasks ul");
         const li = document.createElement("li");
         const span = document.createElement("span");
@@ -29,7 +28,7 @@ document.querySelector(".btn").onclick = function () {
     // edit btn
     const deletebtn = document.querySelectorAll(".sp1");
     let li = document.querySelector("li");
-    for (let i = 0; i < deletebtn.length; i++) {
+        for (let i = 0; i < deletebtn.length; i++) {
         deletebtn[i].addEventListener("click", () => {
             document.querySelector(".textbox").value = deletebtn[i].parentNode.innerText;
             document.querySelector(".textbox").focus();
@@ -43,13 +42,13 @@ document.querySelector(".btn").onclick = function () {
     const close = document.querySelectorAll("span");
     for (let i = 0; i < close.length; i++) {
         close[i].addEventListener("click", () => {
+            close[i].parentElement.style.textDecoration = "line-through";
             close[i].parentElement.style.opacity = 0;
             setTimeout(() => {
                 close[i].parentElement.remove();
             }, 500);
         });
     }
-
     //clear all button
     const clearallbtn = document.querySelector("#clearallbtn");
     for (let i = 0; i < close.length; i++) {
